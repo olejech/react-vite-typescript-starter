@@ -9,4 +9,5 @@
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Stylelint](https://stylelint.io/)
+- [Commitlint](https://commitlint.js.org/#/)
 - [Husky](https://typicode.github.io/husky/#/)
