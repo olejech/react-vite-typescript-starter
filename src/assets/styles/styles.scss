@@ -1,0 +1,16 @@
+/* stylelint-disable selector-max-id */
+@import "colors";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

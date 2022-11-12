@@ -1,0 +1,28 @@
+/* stylelint-disable at-rule-empty-line-before */
+@use "sass:math";
+
+$breakpoints: (
+  "xl": 1440,
+  "lg": 1024,
+  "md": 744,
+  "sm": 414,
+  "xs": 360,
+);
+
+@mixin mq($maxWidth, $minWidth: false) {
+  @if map-has-key($breakpoints, $maxWidth) {
+    $maxWidth: map-get($breakpoints, $maxWidth);
+
+    @if ($minWidth != false) and map-has-key($breakpoints, $minWidth) {
+      $minWidth: map-get($breakpoints, $minWidth) + "px";
+
+      @media (max-width: ($maxWidth - 1px)) and (min-width: $minWidth) {
+        @content;
+      }
+    } @else {
+      @media (max-width: ($maxWidth - 1px)) {
+        @content;
+      }
+    }
+  }
+}

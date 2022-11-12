@@ -1,0 +1,9 @@
+@import "styles/mixins";
+
+.app {
+  background: #eee;
+
+  @include mq("xl") {
+    background: #000;
+  }
+}
